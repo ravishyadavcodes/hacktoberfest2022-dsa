@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int countAsterisks(string s) {
+       int c=0,k=0,p=0;
+       //function to count asterisks
+  for(int i=0;i<s.size();i++){
+      if(s[i]=='*' && k!=1)
+      c++;
+      if(s[i]=='|')
+     { k=1;
+     p++;}
+     if(p==2)
+     {
+         k=0;
+         p=0;
+     }
+  } 
+   return c; }
+     //main function
+int main(){
+string f;
+    //enter the string
+getline(cin,f);
+    //call the function
+cout<<countAsterisks( f);
+return 0;}
